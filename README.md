@@ -1,4 +1,6 @@
-# JS Stellar Base
+## **Note:** _This is a fork of js-stellar-base, customized for the KIN Blockchain._
+
+# JS Kin Base
 
 [![Build Status](https://travis-ci.org/stellar/js-stellar-base.svg)](https://travis-ci.org/stellar/js-stellar-base)
 [![Code Climate](https://codeclimate.com/github/stellar/js-stellar-base/badges/gpa.svg)](https://codeclimate.com/github/stellar/js-stellar-base)
