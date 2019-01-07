@@ -1,6 +1,6 @@
 {
   "name": "kin-base",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Low level Kin support library",
   "main": "lib/index.js",
   "scripts": {
@@ -18,10 +18,15 @@
     "url": "https://github.com/kinecosystem/js-kin-base.git"
   },
   "keywords": [
+    "blockchain",
+    "cryptocurrency",
+    "javascript",
+    "kin",
+    "sdk",
     "stellar"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "author": "Scott Fleckenstein <scott@stellar.org>",
   "license": "Apache-2.0",
@@ -37,7 +42,7 @@
     "coveralls": "^2.11.4",
     "express": "^4.9.8",
     "ghooks": "^0.3.0",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-babel": "^4.0.1",
     "gulp-coveralls": "^0.1.3",
     "gulp-git": "^0.5.3",
@@ -75,7 +80,7 @@
     "crc": "^3.8.0",
     "js-xdr": "^1.0.5",
     "lodash": "^4.17.10",
-    "sha.js": "^2.3.6",
+    "sha.js": "^2.4.11",
     "tweetnacl": "^1.0.0"
   },
   "optionalDependencies": {

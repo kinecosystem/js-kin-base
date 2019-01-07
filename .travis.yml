@@ -4,6 +4,7 @@ matrix:
   - node_js: 6
   - node_js: 8
   - node_js: 10
+  - node_js: 11
   - node_js: 6
     env: SAUCE=true
 script:
@@ -43,12 +44,12 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-      repo: stellar/js-stellar-base
-      node: 8
+      repo: kinecosystem/js-kin-base
+      node: 10
   - provider: script
     script: "./bower_publish.sh"
     skip_cleanup: true
     on:
       tags: true
-      repo: stellar/js-stellar-base
-      node: 8
+      repo: kinecosystem/js-kin-base
+      node: 10

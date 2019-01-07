@@ -8,20 +8,20 @@ describe('TransactionBuilder', function() {
         var transaction;
         var memo;
         beforeEach(function () {
-            source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
             destination = "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2";
             amount = "1000";
-            asset = StellarBase.Asset.native();
-            memo = StellarBase.Memo.id("100");
+            asset = KinBase.Asset.native();
+            memo = KinBase.Memo.id("100");
 
-            transaction = new StellarBase.TransactionBuilder(source)
-                .addOperation(StellarBase.Operation.payment({
+            transaction = new KinBase.TransactionBuilder(source)
+                .addOperation(KinBase.Operation.payment({
                     destination: destination,
                     asset: asset,
                     amount: amount
                 }))
                 .addMemo(memo)
-                .setTimeout(StellarBase.TimeoutInfinite)
+                .setTimeout(KinBase.TimeoutInfinite)
                 .build();
         });
 
@@ -62,8 +62,8 @@ describe('TransactionBuilder', function() {
         var asset;
         var transaction;
         beforeEach(function () {
-            asset = StellarBase.Asset.native();
-            source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            asset = KinBase.Asset.native();
+            source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
 
             destination1 = "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2";
             amount1 = "1000";
@@ -71,18 +71,18 @@ describe('TransactionBuilder', function() {
             amount2 = "2000";
 
 
-            transaction = new StellarBase.TransactionBuilder(source)
-              .addOperation(StellarBase.Operation.payment({
+            transaction = new KinBase.TransactionBuilder(source)
+              .addOperation(KinBase.Operation.payment({
                   destination: destination1,
                   asset: asset,
                   amount: amount1
               }))
-              .addOperation(StellarBase.Operation.payment({
+              .addOperation(KinBase.Operation.payment({
                   destination: destination2,
                   asset: asset,
                   amount: amount2
               }))
-              .setTimeout(StellarBase.TimeoutInfinite)
+              .setTimeout(KinBase.TimeoutInfinite)
               .build();
         });
 
@@ -124,8 +124,8 @@ describe('TransactionBuilder', function() {
         var asset;
         var transaction;
         beforeEach(function () {
-            asset = StellarBase.Asset.native();
-            source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            asset = KinBase.Asset.native();
+            source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
 
             destination1 = "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2";
             amount1 = "1000";
@@ -133,18 +133,18 @@ describe('TransactionBuilder', function() {
             amount2 = "2000";
 
 
-            transaction = new StellarBase.TransactionBuilder(source, {fee: 1000})
-              .addOperation(StellarBase.Operation.payment({
+            transaction = new KinBase.TransactionBuilder(source, {fee: 1000})
+              .addOperation(KinBase.Operation.payment({
                   destination: destination1,
                   asset: asset,
                   amount: amount1
               }))
-              .addOperation(StellarBase.Operation.payment({
+              .addOperation(KinBase.Operation.payment({
                   destination: destination2,
                   asset: asset,
                   amount: amount2
               }))
-              .setTimeout(StellarBase.TimeoutInfinite)
+              .setTimeout(KinBase.TimeoutInfinite)
               .build();
         });
 
@@ -157,15 +157,15 @@ describe('TransactionBuilder', function() {
 
     describe("constructs a native payment transaction with timebounds", function() {
         it("should have have timebounds", function (done) {
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
             let timebounds = {
                 minTime: "1455287522",
                 maxTime: "1455297545"
             };
-            let transaction = new StellarBase.TransactionBuilder(source, {timebounds})
-              .addOperation(StellarBase.Operation.payment({
+            let transaction = new KinBase.TransactionBuilder(source, {timebounds})
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }))
               .build();
@@ -178,11 +178,11 @@ describe('TransactionBuilder', function() {
 
     describe("setTimeout", function() {
         it("not called", function () {
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
-            let transactionBuilder = new StellarBase.TransactionBuilder(source)
-              .addOperation(StellarBase.Operation.payment({
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let transactionBuilder = new KinBase.TransactionBuilder(source)
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }));
 
@@ -191,11 +191,11 @@ describe('TransactionBuilder', function() {
         });
 
         it("timeout negative", function () {
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
-            let transactionBuilder = new StellarBase.TransactionBuilder(source)
-              .addOperation(StellarBase.Operation.payment({
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let transactionBuilder = new KinBase.TransactionBuilder(source)
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }));
 
@@ -204,11 +204,11 @@ describe('TransactionBuilder', function() {
         });
 
         it("sets timebounds", function () {
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
-            let transaction = new StellarBase.TransactionBuilder(source)
-              .addOperation(StellarBase.Operation.payment({
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let transaction = new KinBase.TransactionBuilder(source)
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }))
               .setTimeout(10)
@@ -223,11 +223,11 @@ describe('TransactionBuilder', function() {
               minTime: "1455287522",
               maxTime: "1455297545"
             };
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
-            let transactionBuilder = new StellarBase.TransactionBuilder(source, {timebounds})
-              .addOperation(StellarBase.Operation.payment({
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let transactionBuilder = new KinBase.TransactionBuilder(source, {timebounds})
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }));
 
@@ -239,11 +239,11 @@ describe('TransactionBuilder', function() {
               minTime: "1455287522",
               maxTime: "0"
             };
-            let source = new StellarBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
-            let transaction = new StellarBase.TransactionBuilder(source, {timebounds})
-              .addOperation(StellarBase.Operation.payment({
+            let source = new KinBase.Account("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ", "0");
+            let transaction = new KinBase.TransactionBuilder(source, {timebounds})
+              .addOperation(KinBase.Operation.payment({
                   destination: "GDJJRRMBK4IWLEPJGIE6SXD2LP7REGZODU7WDC3I2D6MR37F4XSHBKX2",
-                  asset: StellarBase.Asset.native(),
+                  asset: KinBase.Asset.native(),
                   amount: "1000"
               }))
               .setTimeout(10)
