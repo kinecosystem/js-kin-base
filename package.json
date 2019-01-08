@@ -1,5 +1,5 @@
 {
-  "name": "kin-base",
+  "name": "@kinecosystem/kin-base",
   "version": "0.1.0",
   "description": "Low level kin support library",
   "main": "lib/index.js",
