@@ -42,6 +42,7 @@
     "babel-core": "^5.8.25",
     "babel-loader": "^5.4.2",
     "chai": "^2.2.0",
+    "circular-dependency-plugin": "^4.4.0",
     "coveralls": "^2.11.4",
     "express": "^4.9.8",
     "ghooks": "^0.3.0",

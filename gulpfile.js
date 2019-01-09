@@ -46,6 +46,7 @@ gulp.task('build:node', ['lint:src'], function() {
 });
 
 gulp.task('build:browser', ['lint:src'], function() {
+  const CircularDependencyPlugin = require('circular-dependency-plugin')
   return gulp.src('src/browser.js')
     .pipe(plugins.webpack({
       output: { library: 'KinBase' },
@@ -56,7 +57,15 @@ gulp.task('build:browser', ['lint:src'], function() {
       },
       plugins: [
         // Ignore native modules (ed25519)
-        new webpack.IgnorePlugin(/ed25519/)
+        new webpack.IgnorePlugin(/ed25519/),
+        new CircularDependencyPlugin({
+          // exclude detection of files based on a RegExp
+          exclude: /a\.js|node_modules/,
+          // add errors to webpack instead of warnings
+          failOnError: true,
+          // set the current working directory for displaying module paths
+          cwd: process.cwd(),
+        })
       ]
     }))
     .pipe(plugins.rename('kin-base.js'))
