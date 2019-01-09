@@ -1,4 +1,4 @@
-# JS Kin Base
+# js-kin-base
 
 [![Build Status](https://travis-ci.org/kinecosystem/js-kin-base.svg)](https://travis-ci.org/kinecosystem/js-kin-base)
 <!---
@@ -63,9 +63,9 @@ relative to your html file.
   <script>console.log(KinBase);</script>
   ```
 
-<!---
-If you don't want to use install Bower, you can copy built JS files from the [bower-js-stellar-base repo](https://github.com/kinecosystem/bower-js-kin-base).
+If you don't want to use install Bower, you can copy built JS files from the [bower-js-kin-base repo](https://github.com/kinecosystem/bower-js-kin-base).
 
+<!--
 ### To use the [cdnjs](https://cdnjs.com/libraries/kin-base) hosted script in the browser
 1. Instruct the browser to fetch the library from [cdnjs](https://cdnjs.com/libraries/kin-base), a 3rd party service that hosts js libraries:
 
@@ -75,7 +75,7 @@ If you don't want to use install Bower, you can copy built JS files from the [bo
   ```
 
 Note that this method relies using a third party to host the JS library. This may not be entirely secure.
---->
+-->
 
 Make sure that you are using the latest version number. They can be found on the [releases page in Github](https://github.com/kinecosystem/js-kin-base/releases).
 
