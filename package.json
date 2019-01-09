@@ -80,7 +80,7 @@
   },
   "dependencies": {
     "base32.js": "^0.1.0",
-    "bignumber.js": "^4.0.0",
+    "bignumber.js": "^5.0.0",
     "crc": "^3.8.0",
     "js-xdr": "^1.0.5",
     "lodash": "^4.17.10",
