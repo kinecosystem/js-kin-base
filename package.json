@@ -29,6 +29,9 @@
     "node": ">=6"
   },
   "author": "Scott Fleckenstein <scott@stellar.org>",
+  "contributors": [
+    "Kin Foundation <blockchain@kinecosystem.org> (https://kinecosystem.org)"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/kinecosystem/js-kin-base/issues"

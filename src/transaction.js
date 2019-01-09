@@ -1,5 +1,5 @@
-import {xdr, hash} from "./index";
-
+import {default as xdr} from "./generated/stellar-xdr_generated";
+import {hash} from "./hashing";
 import {StrKey} from "./strkey";
 import {Operation} from "./operation";
 import {Network} from "./network";
