@@ -1,4 +1,4 @@
-git clone -b gh-pages "https://stellar-jenkins@github.com/stellar/js-stellar-base.git" jsdoc
+git clone -b gh-pages "https://github.com/kinecosystem/js-kin-base.git" jsdoc
 
 if [ ! -d "jsdoc" ]; then
   echo "Error cloning"
