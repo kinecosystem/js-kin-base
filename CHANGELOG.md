@@ -4,10 +4,19 @@ As this project is pre 1.0, breaking changes may happen for minor version bumps.
 
 ## 0.20.0
 
-* **Breaking change** Changed naming and currency precision
-Chaged native currency to have 5 decimal points instead of 7 in Stellar.
-Changed naming from Stellar to Kin where applicable.
-Updated dependencies.
+* **Breaking change** Npm package name changed, added scoping.
+* **Breaking change** Changed network passphrase.
+* Changed naming from Stellar to Kin where applicable.
+* Updated dependencies.
+* Updated docs.
+
+## 0.11.0
+
+* **Breaking change** Native currency precision changed from 7 decimals to 5.
+* Fixed circular dependency.
+* Updated dependencies.
+* Updated docs.
+* Fixed Travis build.
 
 ## 0.10.0
 
