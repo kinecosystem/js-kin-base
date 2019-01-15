@@ -2,13 +2,13 @@ import {hash} from "./hashing";
 
 /**
  * Contains passphrases for common networks:
- * * `Networks.PUBLIC`: `Public Global Stellar Network ; September 2015`
- * * `Networks.TESTNET`: `Test SDF Network ; September 2015`
+ * * `Networks.PUBLIC`: `Kin Mainnet ; December 2018`
+ * * `Networks.TESTNET`: `Kin Testnet ; December 2018`
  * @type {{PUBLIC: string, TESTNET: string}}
  */
 export const Networks = {
-	PUBLIC: "Public Global Stellar Network ; September 2015",
-	TESTNET: "Test SDF Network ; September 2015"
+	PUBLIC: "Kin Mainnet ; December 2018",
+	TESTNET: "Kin Testnet ; December 2018"
 };
 
 var current = null;

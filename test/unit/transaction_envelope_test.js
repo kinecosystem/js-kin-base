@@ -15,7 +15,7 @@ describe('TransactionEnvelope', function() {
     let xdr = "AAAAAAtjwtJadppTmm0NtAU99BFxXXfzPO1N/SqR43Z8aXqXAAAAZAAIj6YAAAACAAAAAAAAAAEAAAAB0QAAAAAAAAEAAAAAAAAAAQAAAADLa6390PDAqg3qDLpshQxS+uVw3ytSgKRirQcInPWt1QAAAAAAAAAAA1Z+AAAAAAAAAAABfGl6lwAAAEBC655+8Izq54MIZrXTVF/E1ycHgQWpVcBD+LFkuOjjJd995u/7wM8sFqQqambL0/ME2FTOtxMO65B9i3eAIu4P";
     var tx = new KinBase.Transaction(xdr);
     KinBase.Network.usePublicNetwork();
-    expect(tx.hash().toString('hex')).to.be.equal("a84d534b3742ad89413bdbf259e02fa4c5d039123769e9bcc63616f723a2bcd5");
+    expect(tx.hash().toString('hex')).to.be.equal("8e4545df2cca9f09de22cfea8067342d4702e6899c6a0ecdf0fb2cec2c260a5a");
   })
 
 });

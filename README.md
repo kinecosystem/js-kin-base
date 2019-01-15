@@ -23,7 +23,7 @@ This is an implementation in JavaScript that can be used on either Node.js or we
 
 Using npm to include js-kin-base in your own project:
 ```shell
-npm install --save kin-base
+npm install --save @kinecosystem/kin-base
 ```
 
 For browsers, [use Bower to install it](#to-use-in-the-browser). It exports a
@@ -41,7 +41,7 @@ relative to your html file.
 1. Install it using npm:
 
   ```shell
-  npm install --save kin-base
+  npm install --save @kinecosystem/kin-base
   ```
 2. require/import it in your JavaScript:
 
