@@ -1,5 +1,5 @@
-// Type definitions for stellar-base 0.10
-// Project: https://github.com/stellar/js-stellar-base
+// Type definitions for kin-base 0.20
+// Project: https://github.com/kin/js-kin-base
 // Definitions by: Carl Foster <https://github.com/carl-foster>
 //                 Triston Jones <https://github.com/tristonj>
 //                 Paul Selden <https://github.com/pselden>
@@ -120,8 +120,8 @@ export class Memo<T extends MemoType = MemoType> {
 }
 
 export enum Networks {
-    PUBLIC = 'Public Global Stellar Network ; September 2015',
-    TESTNET = 'Test SDF Network ; September 2015',
+    PUBLIC = 'Kin Mainnet ; December 2018',
+    TESTNET = 'Kin Testnet ; December 2018',
 }
 
 export class Network {
