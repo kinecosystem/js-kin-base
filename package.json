@@ -1,8 +1,9 @@
 {
   "name": "@kinecosystem/kin-base",
-  "version": "0.20.0",
+  "version": "0.20.1",
   "description": "Low level Kin support library",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "babel-node ./node_modules/gulp/bin/gulp.js test:node",
     "docs": "./node_modules/.bin/jsdoc ./src/ -d docs/",
