@@ -1,5 +1,5 @@
 // Type definitions for kin-base 0.20
-// Project: https://github.com/kin/js-kin-base
+// Project: https://github.com/kinecosystem/js-kin-base
 // Definitions by: Carl Foster <https://github.com/carl-foster>
 //                 Triston Jones <https://github.com/tristonj>
 //                 Paul Selden <https://github.com/pselden>
