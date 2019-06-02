@@ -1,6 +1,6 @@
 {
   "name": "@kinecosystem/kin-base",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "description": "Low level Kin support library",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
