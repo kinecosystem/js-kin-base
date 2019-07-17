@@ -1,6 +1,6 @@
 {
   "name": "@kinecosystem/kin-base",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "description": "Low level Kin support library",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
@@ -84,7 +84,7 @@
     "bignumber.js": "^5.0.0",
     "crc": "^3.8.0",
     "js-xdr": "^1.0.5",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.14",
     "sha.js": "^2.4.11",
     "tweetnacl": "^1.0.0"
   },
