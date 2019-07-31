@@ -6,10 +6,10 @@ matrix:
   - node_js: 10
   - node_js: 11
 
-before_install:
-  - npm install -g bower
-  - bower install
-sudo: required
+#before_install:
+#  - npm install -g bower
+#  - bower install
+#sudo: required
 
 #install:
 #  - bower install kin-base
@@ -53,10 +53,10 @@ deploy:
     tags: true
     repo: kinecosystem/js-kin-base
     node: 10
-- provider: script
-  script: "./bower_publish.sh"
-  skip_cleanup: true
-  on:
-    tags: true
-    repo: kinecosystem/js-kin-base
-    node: 10
+#- provider: script
+#  script: "./bower_publish.sh"
+#  skip_cleanup: true
+#  on:
+#    tags: true
+#    repo: kinecosystem/js-kin-base
+#    node: 10
