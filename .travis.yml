@@ -15,25 +15,17 @@ matrix:
 #  - bower install kin-base
 
 script:
-- |
-  if [ "${SAUCE}" = "true" ]; then
-    if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
-      gulp test:sauce
-    else
-      echo "Pull request - skip Sauce Labs testing..."
-    fi
-  else
-    # Ugly but it's the only way to make istanbul generate coverage report
-    babel-node ./node_modules/gulp/bin/gulp.js test:node
-  fi
+  - npm run version
 
 
 after_success:
-- |
-  # Send report to coveralls but only once
-  if [ -z "${SAUCE}" ] && [ "${TRAVIS_NODE_VERSION}" = "10" ] && [ "${TRAVIS_BRANCH}" = "master" ]; then
-    gulp submit-coverage
-  fi
+  - npm publish --access public
+#- |
+#  # Send report to coveralls but only once
+#  if [ -z "${SAUCE}" ] && [ "${TRAVIS_NODE_VERSION}" = "10" ] && [ "${TRAVIS_BRANCH}" = "master" ]; then
+#    gulp submit-coverage
+#  fi
+
 
 #branches:
 #  only:
