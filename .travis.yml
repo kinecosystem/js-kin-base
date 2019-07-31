@@ -46,17 +46,17 @@ notifications:
 
 
 deploy:
-  provider: npm
+- provider: npm
   email: udi.altaratz@kon.org
   api_key: $API_TOKEN
-    on:
-      tags: true
-      repo: kinecosystem/js-kin-base
-      node: 10
-  - provider: script
-    script: "./bower_publish.sh"
-    skip_cleanup: true
-    on:
-      tags: true
-      repo: kinecosystem/js-kin-base
-      node: 10
+  on:
+    tags: true
+    repo: kinecosystem/js-kin-base
+    node: 10
+- provider: script
+  script: "./bower_publish.sh"
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: kinecosystem/js-kin-base
+    node: 10
