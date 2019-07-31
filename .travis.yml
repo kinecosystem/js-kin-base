@@ -1,10 +1,10 @@
 language: node_js
 matrix:
   include:
-  - node_js: 6
-  - node_js: 8
+#  - node_js: 6
+#  - node_js: 8
   - node_js: 10
-  - node_js: 11
+#  - node_js: 11
 
 #before_install:
 #  - npm install -g bower
@@ -52,7 +52,7 @@ deploy:
   on:
     tags: true
     repo: kinecosystem/js-kin-base
-    node: 10
+#    node: 10
 #- provider: script
 #  script: "./bower_publish.sh"
 #  skip_cleanup: true
