@@ -5,8 +5,15 @@ matrix:
   - node_js: 8
   - node_js: 10
   - node_js: 11
-#  - node_js: 6
-#    env: SAUCE=true
+
+before_install:
+  - npm install -g bower
+  - bower install
+sudo: required
+
+#install:
+#  - bower install kin-base
+
 script:
 - |
   if [ "${SAUCE}" = "true" ]; then
@@ -19,30 +26,37 @@ script:
     # Ugly but it's the only way to make istanbul generate coverage report
     babel-node ./node_modules/gulp/bin/gulp.js test:node
   fi
+
+
 after_success:
 - |
   # Send report to coveralls but only once
   if [ -z "${SAUCE}" ] && [ "${TRAVIS_NODE_VERSION}" = "10" ] && [ "${TRAVIS_BRANCH}" = "master" ]; then
     gulp submit-coverage
   fi
+
+#branches:
+#  only:
+#    - master
+
+
 notifications:
   email: false
-#before_deploy: gulp build
-#after_deploy: "./after_deploy.sh"
-#deploy:
-#  - provider: npm
-#    email: npm@stellar.org
-#    api_key:
-#      secure: UHevh5JXNHILJeMNMfgU77noiOndjx9N3+RvTxUoR2PaoJhLqpnzlmmwsX7rp6dXyByoNv3AMp1Dt8tSMpX+oZRiofnbh1wGhAKs5ZRxqiZUPQPjIaqcDnT2PhkLr573BR6Nf9+/mePlSangD0rkdSxAxYv1m/Inn+3Bc3dIphM=
-#    skip_cleanup: true
-#    on:
-#      tags: true
-#      repo: kinecosystem/js-kin-base
-#      node: 10
-#  - provider: script
-#    script: "./bower_publish.sh"
-#    skip_cleanup: true
-#    on:
-#      tags: true
-#      repo: kinecosystem/js-kin-base
-#      node: 10
+
+
+
+deploy:
+  provider: npm
+  email: udi.altaratz@kon.org
+  api_key: $API_TOKEN
+    on:
+      tags: true
+      repo: kinecosystem/js-kin-base
+      node: 10
+  - provider: script
+    script: "./bower_publish.sh"
+    skip_cleanup: true
+    on:
+      tags: true
+      repo: kinecosystem/js-kin-base
+      node: 10

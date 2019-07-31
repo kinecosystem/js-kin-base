@@ -4,6 +4,9 @@
   "description": "Low level Kin support library",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npmjs.com"
+  },
   "scripts": {
     "test": "babel-node ./node_modules/gulp/bin/gulp.js test:node",
     "docs": "./node_modules/.bin/jsdoc ./src/ -d docs/",
