@@ -14,7 +14,9 @@ addons:
 #  - bower install
 #sudo: required
 
-#install:
+install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 #  - bower install kin-base
 
 script:
