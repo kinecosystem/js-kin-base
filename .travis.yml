@@ -10,19 +10,25 @@ addons:
   firefox: "68.0.1"
 
 #before_install:
+
+dist: xenial
+services:
+  - xvfb
+
 #  - npm install -g bower
 #  - bower install
 #sudo: required
 
 install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "xvfb-run --auto-servernum --server-args='-screen 0 640x480x24'"
+#  - "export DISPLAY=:99.0"
+# - "sh -e /etc/init.d/xvfb start"
+#  - "xvfb-run --auto-servernum --server-args='-screen 0 640x480x24'"
 #  - bower install kin-base
 
 script:
-# - npm run test
-  - npm run version
+  - xvfb-run --auto-servernum --server-args='-screen 0 640x480x24'
+  - npm run test
+# - npm run version
 
 
 after_success:
