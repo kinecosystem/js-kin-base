@@ -21,8 +21,8 @@ install:
 #  - bower install kin-base
 
 script:
-  - npm run test
- # - npm run version
+ # - npm run test
+  - npm run version
 
 
 after_success:
