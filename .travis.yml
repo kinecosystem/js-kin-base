@@ -16,7 +16,7 @@ addons:
 
 install:
   - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb-run --auto-servernum --server-args='-screen 0 640x480x24
+# - "sh -e /etc/init.d/xvfb-run --auto-servernum --server-args='-screen 0 640x480x24'"
 #  - "sh -e /etc/init.d/xvfb start"
 #  - bower install kin-base
 
