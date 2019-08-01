@@ -16,15 +16,17 @@ addons:
 
 install:
   - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  - "sh -e /etc/init.d/xvfb-run --auto-servernum --server-args='-screen 0 640x480x24
+#  - "sh -e /etc/init.d/xvfb start"
 #  - bower install kin-base
 
 script:
-  - npm run version
+  - npm run test
+ # - npm run version
 
 
 after_success:
-  - npm publish --access public
+#  - npm publish --access public
 #- |
 #  # Send report to coveralls but only once
 #  if [ -z "${SAUCE}" ] && [ "${TRAVIS_NODE_VERSION}" = "10" ] && [ "${TRAVIS_BRANCH}" = "master" ]; then
@@ -43,13 +45,13 @@ notifications:
 
 
 deploy:
-- provider: npm
-  email: udi.altaratz@kon.org
-  api_key: $API_TOKEN
-  on:
-    tags: true
-    repo: kinecosystem/js-kin-base
-    node: 10
+#- provider: npm
+#  email: udi.altaratz@kon.org
+#  api_key: $API_TOKEN
+#  on:
+#    tags: true
+#    repo: kinecosystem/js-kin-base
+#    node: 10
 #- provider: script
 #  script: "./bower_publish.sh"
 #  skip_cleanup: true
